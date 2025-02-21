@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({behavior: "smooth"});
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#Perfil">Perfil</a>
+            <a href="#RedesS">Redes Sociais</a>
+            <a href="#Fotos">Fotos</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+
+            <div class="tudo">
+
+                <ul id="Perfil" class="nome">
+                    <img alt="Foto" class="img" src="img/ftperfil.jpg"><br>
+
+                    <h1>Pessoa do Santos Silva</h1>
+
+                    <h5 id="RedesS" class="aga5">Cursando Ciência da Computação</h5> <!--Coloquei aqui o id RedesS para que quando a pessoa clique nele fique um pouco centralizado :> -->
+                </ul>
+
+                <h2>Redes Sociais</h2>
+                        <div class="grupobotoes">
+                            <a href="https://www.instagram.com"><button class="botao"><img class="imgbotao" src="icones/instagram.png"> Instagram</button>
+                            <br>
+                            <a href="https://www.facebook.com"><button class="botao"><img class="imgbotao" src="icones/Facebook.png"> Facebook</button></a>
+                            <br>
+                        </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2 id="Fotos">Fotos</h2>
+
+            <div role="img" class="containerfotosUp">
+                <div class="item"><img class="fotos" src="img/foto.jpeg"></div>
+                <div class="item"><img class="fotos" src="img/foto.jpeg"></div>
+                <div class="item"><img class="fotos" src="img/foto.jpeg"></div>
+            </div>
+
+            <div role="img" class="containerfotosDown">
+                <div class="item"><img class="fotos" src="img/foto.jpeg"></div>
+                <div class="item"><img class="fotos" src="img/foto.jpeg"></div>
+                <div class="item"><img class="fotos" src="img/foto.jpeg"></div>
+            </div>
+
+        </section> 
+
+    </main>
+    <!--Eu prefiro escrever códigos com espaços em cada tag, fica mais bonito visualmente e bem mais fácil de entender.-->
+</body>
+<!--Criado por Marcos Paulo B. da Silva 2025-->
+</html>
